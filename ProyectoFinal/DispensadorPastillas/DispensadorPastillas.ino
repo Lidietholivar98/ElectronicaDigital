@@ -106,6 +106,7 @@ void loop() {
     modoConfig();
   }
   activarDesactivarAlarma();
+  resetearVariablesDeControl();
 }
 
 void desplegarHora() {
@@ -295,6 +296,11 @@ void activarDesactivarAlarma() {
     Serial.println("Se cambia variable a true");
     sonarAlarma = true;  //Variable a 1 después del minuto de sonido
   }                 // 1 minuto de alarma
+}
+
+void resetearVariablesDeControl(){
+  esConfigHora = false;
+  esAlarma = false;
 }
 
 // Establecer color aleatorio para luces
