@@ -1,7 +1,5 @@
 #include <Servo.h>
 #include <Adafruit_NeoPixel.h>
-//#include <Adafruit_LiquidCrystal.h>
-#include <EEPROM.h>
 #include <LiquidCrystal.h>
 
 #define NUMPIXELS 9    // número de neopixeles en strip
@@ -95,10 +93,6 @@ void setup() {
   pinMode(PIN_BUZZ, OUTPUT);
 
   Serial.begin(9600);
-
-  //Para recuperar cambios del EEPROM
-  //variable = EEPROM.read(0);
-  //variable = EEPROM.read(1);
 }
 
 void loop() {
